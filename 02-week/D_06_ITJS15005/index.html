@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadatak 06</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form action="#" method="get">
+      <div class="row">
+        <label for="name" class="col-3 col-m-12">Ime i prezime</label>
+        <input
+          type="text"
+          name="name"
+          class="col-9 input col-m-12"
+          placeholder=" Unesite svoje ime i prezime"
+        />
+      </div>
+      <div class="row">
+        <label for="pretraga" class="col-3 col-m-12">Pretrazite</label>
+        <input
+          type="text"
+          name="pretraga"
+          class="input col-9 col-m-6"
+          placeholder=" 🔎 Pretrazite"
+        />
+      </div>
+      <div class="row">
+        <label for="zemlja" class="col-3 col-m-12">Zemlja</label>
+        <select name="zemlja" class="col-9 col-m-12 input">
+          <option value="rs" selected>Srbija</option>
+          <option value="ita" class="input">Italija</option>
+          <option value="fr" class="input">Francuska</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="opis" class="col-3 col-m-12">Opis</label>
+        <textarea
+          name="opis"
+          class="col-9 col-m-12"
+          cols="50"
+          rows="10"
+          placeholder="Napisite neki opis"
+        ></textarea>
+      </div>
+      <div class="row">
+        <input type="submit" value="Potvrdite" class="col-12 btn col-m-12" />
+      </div>
+    </form>
+  </body>
+</html>
