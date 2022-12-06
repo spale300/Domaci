@@ -27,7 +27,7 @@ let drugiDan = predjeno * 2 + 2;
 let preostalo = poglavlje - drugiDan;
 
 if (poglavlje / 2 > preostalo) {
-  console.log(`Ostalo je da se procita jos manje od polovine knjige`);
+  console.log(`Ostalo je da se procita jos manje od polovine knjige.`);
 } else {
   console.log(`Ostalo je jos ${preostalo} poglavlja do kraja knjige.`);
 }
