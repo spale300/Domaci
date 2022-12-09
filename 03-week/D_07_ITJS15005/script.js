@@ -22,9 +22,9 @@ console.log(`Mika ima kusur od ${km} dinara.`);
 console.log("------Zadatak 02------");
 
 let poglavlje = 32;
-let predjeno = 9;
-let drugiDan = predjeno * 2 + 2;
-let preostalo = poglavlje - drugiDan;
+let prviDan = 9;
+let drugiDan = prviDan + 2;
+let preostalo = poglavlje - (prviDan + drugiDan);
 
 if (poglavlje / 2 > preostalo) {
   console.log(`Ostalo je da se procita jos manje od polovine knjige.`);
