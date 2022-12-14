@@ -16,10 +16,10 @@ for (i = 1; i <= n; i++) {
 
 //02.For petljom odrediti da li je dati prirodan broj n prost.
 
-n = 33;
+n = 4;
 let brojDelioca = 0;
 
-for (i = 1; i <= n / 2; i++) {
+for (i = 1; i <= n; i++) {
   if (n % i == 0) {
     brojDelioca++;
   }
