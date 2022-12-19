@@ -1,0 +1,11 @@
+span {
+  display: inline-block;
+  padding: 40px;
+  width: 30px;
+  text-align: center;
+}
+
+.crno {
+  background-color: black;
+  color: white;
+}
