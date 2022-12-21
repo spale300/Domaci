@@ -1,0 +1,13 @@
+table {
+  margin: 20px;
+}
+
+td {
+  padding: 10px;
+  border: 2px solid black;
+}
+
+img {
+  margin: 20px;
+  width: 200px;
+}
