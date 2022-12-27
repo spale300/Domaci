@@ -1,6 +1,7 @@
 let dan = {
   kisa: true,
   oblacno: true,
+  suncano: false,
   temperatura: [2, 24, 3, 7, 32],
   //01.
   tropska: function () {
@@ -25,6 +26,11 @@ let dan = {
   //03.
   neuobicajen: function () {
     let dan = false;
+
+    if (this.kisa == true && this.oblacno == true && this.suncano == false) {
+      return true;
+    }
+
     this.temperatura.forEach((el) => {
       if ((el < -5 && this.kisa == true) || (el > 25 && this.oblacno == true)) {
         dan = true;
