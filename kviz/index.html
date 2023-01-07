@@ -9,47 +9,116 @@
   </head>
   <body>
     <div class="container">
-      <div>
-        <h1 id="p1"></h1>
-        <input type="radio" name="p1" checked />
-        <input type="radio" name="p1" />
-        <input type="radio" name="p1" />
-        <input type="radio" name="p1" />
+      <div class="pitanja">
+        <div>
+          <h1 id="p1"></h1>
+          <input type="radio" name="p1" value="0" checked /><span
+            class="pitanje1"
+          ></span
+          ><br />
+          <input type="radio" name="p1" value="1" /><span
+            class="pitanje1"
+          ></span
+          ><br />
+          <input type="radio" name="p1" value="2" /><span
+            class="pitanje1"
+          ></span
+          ><br />
+          <input type="radio" name="p1" value="3" /><span
+            class="pitanje1"
+          ></span
+          ><br />
+        </div>
+        <div>
+          <h1 id="p2"></h1>
+          <input type="radio" name="p2" value="0" checked /><span
+            class="pitanje2"
+          ></span
+          ><br />
+          <input type="radio" name="p2" value="1" /><span
+            class="pitanje2"
+          ></span
+          ><br />
+          <input type="radio" name="p2" value="2" /><span
+            class="pitanje2"
+          ></span
+          ><br />
+          <input type="radio" name="p2" value="3" /><span
+            class="pitanje2"
+          ></span
+          ><br />
+        </div>
+        <div>
+          <h1 id="p3"></h1>
+          <input type="radio" name="p3" value="0" checked /><span
+            class="pitanje3"
+          ></span
+          ><br />
+          <input type="radio" name="p3" value="1" /><span
+            class="pitanje3"
+          ></span
+          ><br />
+          <input type="radio" name="p3" value="2" /><span
+            class="pitanje3"
+          ></span
+          ><br />
+          <input type="radio" name="p3" value="3" /><span
+            class="pitanje3"
+          ></span
+          ><br />
+        </div>
+        <div>
+          <h1 id="p4"></h1>
+          <input type="radio" name="p4" value="0" checked /><span
+            class="pitanje4"
+          ></span
+          ><br />
+          <input type="radio" name="p4" value="1" /><span
+            class="pitanje4"
+          ></span
+          ><br />
+          <input type="radio" name="p4" value="2" /><span
+            class="pitanje4"
+          ></span
+          ><br />
+          <input type="radio" name="p4" value="3" /><span
+            class="pitanje4"
+          ></span
+          ><br />
+        </div>
+        <div>
+          <h1 id="p5"></h1>
+          <input type="radio" name="p5" value="0" checked /><span
+            class="pitanje5"
+          ></span
+          ><br />
+          <input type="radio" name="p5" value="1" /><span
+            class="pitanje5"
+          ></span
+          ><br />
+          <input type="radio" name="p5" value="2" /><span
+            class="pitanje5"
+          ></span
+          ><br />
+          <input type="radio" name="p5" value="3" /><span
+            class="pitanje5"
+          ></span
+          ><br />
+        </div>
       </div>
-      <div>
-        <h1 id="p2"></h1>
-        <input type="radio" name="p2" />
-        <input type="radio" name="p2" />
-        <input type="radio" name="p2" />
-        <input type="radio" name="p2" />
-      </div>
-      <div>
-        <h1 id="p3"></h1>
-        <input type="radio" name="p3" />
-        <input type="radio" name="p3" />
-        <input type="radio" name="p3" />
-        <input type="radio" name="p3" />
-      </div>
-      <div>
-        <h1 id="p4"></h1>
-        <input type="radio" name="p4" />
-        <input type="radio" name="p4" />
-        <input type="radio" name="p4" />
-        <input type="radio" name="p4" />
-      </div>
-      <div>
-        <h1 id="p5"></h1>
-        <input type="radio" name="p5" />
-        <input type="radio" name="p5" />
-        <input type="radio" name="p5" />
-        <input type="radio" name="p5" />
-      </div>
-    </div>
-    <div>
-      <button>Posalji odgovore</button>
-      <button>Nova pitanja</button>
-    </div>
 
+      <div>
+        <button id="subBtn">Posalji odgovore</button>
+        <button id="resetBtn">Nova pitanja</button>
+      </div>
+      <div>
+        <span id="rezultat1"></span><br />
+        <span id="rezultat2"></span><br />
+        <span id="rezultat3"></span><br />
+        <span id="rezultat4"></span><br />
+        <span id="rezultat5"></span><br />
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
