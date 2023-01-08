@@ -99,8 +99,6 @@ p3.innerText = izabranaPitanja[2].tekst;
 p4.innerText = izabranaPitanja[3].tekst;
 p5.innerText = izabranaPitanja[4].tekst;
 
-let check1 = document.querySelector("input[name='p1']:checked");
-
 let subBtn = document.getElementById("subBtn");
 let resetBtn = document.getElementById("resetBtn");
 

@@ -71,7 +71,7 @@ calBtn.addEventListener("click", () => {
   }
   if (cokCheckBox.checked == true) {
     let cokDodatak = document.getElementById("cokol");
-    cokDodatak.innerText = `+ ${cokCheckBox.value}`;
+    cokDodatak.innerText = `+ ${cokCheckBox.value} `;
   }
   if (samCheckBox.checked == true) {
     let samDodatak = document.getElementById("sampanj");
