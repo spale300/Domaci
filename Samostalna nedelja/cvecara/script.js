@@ -20,10 +20,6 @@ let slike = document.getElementById("slike");
 let cena = document.getElementById("cena");
 let cenaPopust = document.getElementById("cenaPopust");
 
-console.log(ruzeInput);
-console.log(ljiljanInput);
-console.log(gerberInput);
-
 let calculatePrice = function () {
   let suma = 0;
   if (ruzeInput.value != "") {

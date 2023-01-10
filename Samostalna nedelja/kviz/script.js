@@ -203,6 +203,12 @@ subBtn.addEventListener("click", () => {
   tacno4();
   tacno5();
   subBtn.disabled = true;
+  let radio = document.querySelectorAll("input[type='radio']");
+
+  radio.forEach((el) => {
+    el.disabled = true;
+  });
+  console.log(radio);
 });
 
 resetBtn.addEventListener("click", () => {
