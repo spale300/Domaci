@@ -1,11 +1,11 @@
-let li = document.querySelectorAll("li");
 let ul = document.querySelector("ul");
 
 let input = document.querySelector("input[type='text']");
 
 let arrTasks = [];
 
-addEventListener("load", () => {
+window.addEventListener("load", (e) => {
+  console.log(e);
   let tasks = localStorage.getItem("tasks");
   arrTasks = JSON.parse(tasks);
 
@@ -23,7 +23,7 @@ let showElemets = (arr) => {
 input.addEventListener("keyup", (e) => {
   if (e.keyCode == 13) {
     if (input.value != "") {
-      item = document.createElement("li");
+      let item = document.createElement("li");
 
       let radioAdd = document.querySelector("input[name='tdl']:checked");
 
@@ -44,10 +44,13 @@ input.addEventListener("keyup", (e) => {
 });
 
 ul.addEventListener("click", (e) => {
-  console.log(e);
-
-  if (e.target.tagName == "LI") {
-    arrTasks.pop(e.target.remove());
+  if (e.target.tagName === "LI") {
+    let index = Array.prototype.indexOf.call(
+      e.target.parentNode.children,
+      e.target
+    );
+    arrTasks.splice(index, 1);
     localStorage.setItem("tasks", JSON.stringify(arrTasks));
+    e.target.remove();
   }
 });
