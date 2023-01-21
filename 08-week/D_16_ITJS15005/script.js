@@ -14,9 +14,9 @@ let showElemets = (arr) => {
 
 window.addEventListener("load", (e) => {
   let tasks = localStorage.getItem("tasks");
-  arrTasks = JSON.parse(tasks);
 
-  if (arrTasks != null) {
+  if (tasks != null) {
+    arrTasks = JSON.parse(tasks);
     showElemets(arrTasks);
   } else {
     localStorage.setItem("tasks", []);
