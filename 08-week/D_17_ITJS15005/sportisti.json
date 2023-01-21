@@ -1,0 +1,27 @@
+[
+  {
+    "imePrezime": "Lionel Messi",
+    "visina": 170,
+    "timovi": ["Barcelona", "PSG", "Lakers"]
+  },
+  {
+    "imePrezime": "Cristiano Ronaldo",
+    "visina": 188,
+    "timovi": ["Man. United", "Real Madrid", "Juventus", "Sporting", "Lakers"]
+  },
+  {
+    "imePrezime": "Dusan Vlahovic",
+    "visina": 193,
+    "timovi": ["Partizan"]
+  },
+  {
+    "imePrezime": "Eric Maxim Choupo-Moting",
+    "visina": 133,
+    "timovi": ["Schalke", "PSG", "Bayern Munich"]
+  },
+  {
+    "imePrezime": "Mario Baloteli",
+    "visina": 160,
+    "timovi": ["Inter", "Milan", "Man. City", "Liverpul", "Nica"]
+  }
+]
