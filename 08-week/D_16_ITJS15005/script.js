@@ -4,14 +4,6 @@ let input = document.querySelector("input[type='text']");
 
 let arrTasks = [];
 
-window.addEventListener("load", (e) => {
-  console.log(e);
-  let tasks = localStorage.getItem("tasks");
-  arrTasks = JSON.parse(tasks);
-
-  showElemets(arrTasks);
-});
-
 let showElemets = (arr) => {
   arr.forEach((el) => {
     let li = document.createElement("li");
@@ -19,6 +11,17 @@ let showElemets = (arr) => {
     ul.appendChild(li);
   });
 };
+
+window.addEventListener("load", (e) => {
+  let tasks = localStorage.getItem("tasks");
+  arrTasks = JSON.parse(tasks);
+
+  if (arrTasks != null) {
+    showElemets(arrTasks);
+  } else {
+    localStorage.setItem("tasks", []);
+  }
+});
 
 input.addEventListener("keyup", (e) => {
   if (e.keyCode == 13) {
@@ -39,7 +42,6 @@ input.addEventListener("keyup", (e) => {
 
       input.value = "";
     }
-    console.log(arrTasks);
   }
 });
 
@@ -49,6 +51,7 @@ ul.addEventListener("click", (e) => {
       e.target.parentNode.children,
       e.target
     );
+
     arrTasks.splice(index, 1);
     localStorage.setItem("tasks", JSON.stringify(arrTasks));
     e.target.remove();
