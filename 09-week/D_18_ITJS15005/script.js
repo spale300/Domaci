@@ -8,6 +8,12 @@ db.collection("movies")
     name: "Fight Club",
     rating: 8.8,
     release_year: 1999,
+  })
+  .then(() => {
+    console.log(`Film dodat!`);
+  })
+  .catch((err) => {
+    console.log(err);
   });
 
 db.collection("movies")
@@ -18,6 +24,21 @@ db.collection("movies")
     name: "Inception",
     rating: 8.9,
     release_year: 2010,
+  })
+  .then(() => {
+    console.log(`Film dodat!`);
+    return db
+      .collection("movies")
+      .doc("inception")
+      .update({
+        director: { name_R: "Kristofer", surname: "Nolan" },
+      });
+  })
+  .then(() => {
+    console.log(`Uspesno promenjen reziser!`);
+  })
+  .catch((err) => {
+    console.log(err);
   });
 
 db.collection("movies")
