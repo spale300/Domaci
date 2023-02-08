@@ -15,19 +15,21 @@ export class ChatUI {
     let html = "";
 
     if (send == data.username) {
-      html = `<li class="list list-r"> <span class="username">${
+      html = `<li class="list list-r" id=""> <span class="username">${
         data.username
       } :</span>
     <span class="message">${data.message}</span><br>
     <span>${this.time(data)}</span>
+    <img src='bin.png' class = 'img'>
     </li>
     `;
     } else {
-      html = `<li class="list list-l"> <span class="username">${
+      html = `<li class="list list-l" id=""> <span class="username">${
         data.username
       } :</span>
     <span class="message">${data.message}</span><br>
     <span>${this.time(data)}</span>
+    <img src='bin.png' class = 'img'>
     </li>
     `;
     }

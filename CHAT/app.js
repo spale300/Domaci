@@ -8,7 +8,11 @@ let inputSend = document.getElementById("inputMessage");
 let btnUpdate = document.getElementById("btnUpdate");
 let inputUpdate = document.getElementById("inputUsername");
 let btns = document.querySelector("nav");
+let colorP = document.getElementById("fcolor");
+let btnC = document.getElementById("colorC");
+let body = document.querySelector("body");
 
+let localColor = localStorage.getItem("color");
 let localUsername = localStorage.getItem("username");
 let localRoom = localStorage.getItem("room");
 let chatroom = new Chatroom(localRoom, localUsername);
@@ -25,6 +29,11 @@ if (localUsername != null) {
   chatroom.username = "Anonymus";
 }
 
+if (localColor != null) {
+  colorP.value = localColor;
+} else {
+  colorP.value = "#fff";
+}
 btns.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -52,6 +61,17 @@ let chatUI = new ChatUI(ul);
 chatroom.getChats((data) => {
   chatUI.templateLI(data, chatroom.username);
 });
+
+btnC.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.setItem("color", colorP.value);
+
+  setTimeout(() => {
+    body.style.backgroundColor = colorP.value;
+  }, 500);
+});
+
+body.style.backgroundColor = localColor;
 
 btnSend.addEventListener("click", (e) => {
   e.preventDefault();
@@ -89,4 +109,31 @@ btnUpdate.addEventListener("click", (e) => {
 
   notification(chatroom.username);
   window.location.reload();
+});
+
+ul.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log(e.target.tagName);
+
+  if (e.target.tagName === "IMG") {
+    if (confirm(`Are you sure you want to delete the message?`) == true) {
+      let li = e.target.parentElement;
+      li.remove();
+      console.log(li);
+      let id = li.id;
+      console.log(id);
+      let username = li.classList;
+      console.log(username);
+      if (username.contains(localUsername)) {
+        chatroom
+          .removeChat(id)
+          .then(() => {
+            console.log("Chat deleted!");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    }
+  }
 });

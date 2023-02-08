@@ -26,6 +26,8 @@ export class Chatroom {
         if (u.trim().length > 0) {
           this._username = u;
           localStorage.setItem("username", u);
+        } else {
+          alert("Invalid username!");
         }
       } else {
         alert("Invalid username!");
@@ -53,6 +55,11 @@ export class Chatroom {
     };
 
     let response = await this.chat.add(obj);
+    return response;
+  }
+
+  async removeChat(id) {
+    let response = await this.chats.doc(id).delete();
     return response;
   }
 
